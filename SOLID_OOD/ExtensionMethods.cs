@@ -13,6 +13,8 @@ namespace SOLID_OOD
         public static void RegisterServices(this ServiceCollection services)
         {
             services.AddScoped<ICallService, CallService>();
+            //services.AddScoped<ICamera, Camera>();
+            services.AddScoped<ICamera, CameraV2>();
             services.AddScoped<IMobilePhone,MobilePhone>();
         }
     }

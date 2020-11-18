@@ -16,6 +16,7 @@ namespace SOLID_OOD
 
             mobilePhone.Call("Hassaan");
             mobilePhone.RecieveCall("Hassaan");
+            mobilePhone.CapturePicture();
 
             
             Console.ReadLine();

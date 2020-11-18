@@ -9,9 +9,11 @@ namespace SOLID_OOD.Services
     public class MobilePhone : IMobilePhone
     {
         private readonly ICallService callService;
-        public MobilePhone(ICallService callService)
+        private readonly ICamera camera;
+        public MobilePhone(ICallService callService,ICamera camera)
         {
             this.callService = callService;
+            this.camera = camera;
         }
         public void Call(string contact)
         {
@@ -21,6 +23,11 @@ namespace SOLID_OOD.Services
         public void RecieveCall(string contact)
         {
             callService.RecieveCall(contact);
+        }
+
+        public void CapturePicture()
+        {
+            camera.CapturePicture();
         }
     }
 }

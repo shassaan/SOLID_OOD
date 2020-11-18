@@ -10,5 +10,6 @@ namespace SOLID_OOD.Services
     {
         void Call(string contact);
         void RecieveCall(string contact);
+        void CapturePicture();
     }
 }
